@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">MyDrink</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="something_wrong">Something wrong, please try again</string>
+    <string name="name">Name :</string>
+    <string name="image_of_drink">Image of Drink</string>
+    <string name="category">Category :</string>
+    <string name="instructor">Instructor :</string>
+    <string name="menu_favorite">Favorite Menu</string>
+    <string name="no_data">Empty data</string>
+    <string name="add_fav_drink">Add your favorite drink from the list</string>
+    <string name="favorite_drink">Favorite Drinks</string>
+    <string name="favorite">Favorite</string>
+    <string name="setting">Setting</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="display_header">Display</string>
+    <string name="pref_key_dark">key_dark_mode</string>
+    <string name="pref_dark_title">Dark mode</string>
+    <string name="pref_dark_auto" translatable="false">auto</string>
+    <string name="pref_dark_on" translatable="false">on</string>
+    <string name="pref_dark_off" translatable="false">off</string>
+    <string name="dark_mode_auto">Automatic</string>
+    <string name="dark_mode_on">Dark mode</string>
+    <string name="dark_mode_off">Light mode</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="image_of_drink">Image of Drink</string>
+    <string name="name">Name :</string>
+    <string name="category">Category :</string>
+    <string name="instructor">Instructor :</string>
+    <string name="see_detail">See Detail</string>
+
+</resources>
