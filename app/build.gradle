@@ -8,6 +8,7 @@ apply from: '../shared_dependencies.gradle'
 
 android {
     compileSdk 32
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.raf.mydrink"
@@ -22,7 +23,11 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -49,6 +54,8 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:$constraint_version"
     implementation "androidx.legacy:legacy-support-v4:$legacy_support_version"
     implementation 'androidx.preference:preference-ktx:1.2.0'
+    implementation 'androidx.test:core-ktx:1.4.0'
+    implementation 'androidx.test.espresso:espresso-intents:3.4.0'
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$androidx_junit_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
@@ -75,4 +82,6 @@ dependencies {
     implementation "org.koin:koin-core:$koin_version"
     implementation "org.koin:koin-android:$koin_version"
     implementation "org.koin:koin-android-viewmodel:$koin_version"
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.8.1'
 }

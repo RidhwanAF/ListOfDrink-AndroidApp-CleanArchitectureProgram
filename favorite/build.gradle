@@ -19,13 +19,6 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -39,4 +32,5 @@ dependencies {
     implementation project(":core")
     implementation project(":app")
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.8.1'
 }

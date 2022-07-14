@@ -57,6 +57,11 @@ class DetailActivity : AppCompatActivity() {
         return true
     }
 
+    override fun onStop() {
+        super.onStop()
+        showDetailDrink(null)
+    }
+
     companion object {
         const val EXTRA_DATA = "extra_data"
     }

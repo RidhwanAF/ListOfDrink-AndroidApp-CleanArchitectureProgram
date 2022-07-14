@@ -24,6 +24,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.fabFavorite.setOnClickListener {
+            val uri = Uri.parse("drinkapp://favorite")
+            startActivity(Intent(Intent.ACTION_VIEW, uri))
+        }
         showAllDrink()
     }
 
@@ -67,14 +71,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.menu_favorite -> {
-                val uri = Uri.parse("drinkapp://favorite")
-                startActivity(Intent(Intent.ACTION_VIEW, uri))
-            }
             R.id.menu_setting -> startActivity(Intent(this, SettingActivity::class.java))
             else -> null
         } ?: return super.onOptionsItemSelected(item)
         return true
     }
 
+    override fun onStop() {
+        super.onStop()
+        showAllDrink()
+    }
 }

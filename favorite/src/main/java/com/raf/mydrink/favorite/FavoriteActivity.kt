@@ -51,4 +51,9 @@ class FavoriteActivity : AppCompatActivity() {
         finish()
         return true
     }
+
+    override fun onStop() {
+        super.onStop()
+        showFavoriteData()
+    }
 }
