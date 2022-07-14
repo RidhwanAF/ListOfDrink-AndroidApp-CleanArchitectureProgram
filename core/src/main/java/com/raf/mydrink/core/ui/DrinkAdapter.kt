@@ -15,7 +15,6 @@ class DrinkAdapter : RecyclerView.Adapter<DrinkAdapter.ListViewHolder>() {
     var onItemClick: ((Drink) -> Unit)? = null
 
     fun setData(newListData: List<Drink>) {
-        if (newListData == null) return
         listData.clear()
         listData.addAll(newListData)
         notifyDataSetChanged()
